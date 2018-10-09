@@ -350,6 +350,7 @@ def repeated_checkpoint_run(tensor_dict,
     ValueError: if max_num_of_evaluations is not None or a positive number.
     ValueError: if checkpoint_dirs doesn't have at least one element.
   """
+  nonlocal metrics
   if max_number_of_evaluations and max_number_of_evaluations <= 0:
     raise ValueError(
         '`number_of_steps` must be either None or a positive number.')
