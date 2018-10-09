@@ -302,6 +302,7 @@ def repeated_checkpoint_run(tensor_dict,
                             master='',
                             save_graph=False,
                             save_graph_dir=''):
+  global metrics
   """Periodically evaluates desired tensors using checkpoint_dirs or restore_fn.
 
   This function repeatedly loads a checkpoint and evaluates a desired
